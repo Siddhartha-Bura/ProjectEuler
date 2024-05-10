@@ -9,15 +9,9 @@ bool check_palin(string ans){
 }
 int main() {
     int ans = 0;
-    bool found = false;
     for(int i=999;i>=100;i--){
-        for(int j=i;j>=100;j--){
-            int pr = i * j;
-            string x = to_string(pr);
-            found = check_palin(x);
-            if(found && pr>ans) ans = pr;
-        }
-    }
+        for(int j=i;j>=100;j--)
+            if(check_palin(to_string(i*j)) && pr>ans) ans = pr;
     cout<<ans;
     return 0;
 }
