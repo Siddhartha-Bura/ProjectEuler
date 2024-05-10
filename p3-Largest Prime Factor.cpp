@@ -9,7 +9,7 @@ int main() {
     pn[0] = pn[1] = 0;
     for(ll i=2;i*i<=pn.size();i++){
         if(pn[i] == 1)
-        for(ll j=2*i;j<pn.size();j+=i)
+        for(ll j=i*i;j<pn.size();j+=i)
             pn[j] = 0;
     }
     ll ans = 2;
