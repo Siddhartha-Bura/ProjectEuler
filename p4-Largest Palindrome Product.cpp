@@ -9,9 +9,9 @@ bool check_palin(string ans){
 }
 int main() {
     int ans = 0;
-    for(int i=999;i>=100;i--){
+    for(int i=999;i>=100;i--)
         for(int j=i;j>=100;j--)
-            if(check_palin(to_string(i*j)) && pr>ans) ans = pr;
+            if(check_palin(to_string(i*j)) && (i*j)>ans) ans = (i*j);
     cout<<ans;
     return 0;
 }
