@@ -15,7 +15,7 @@ vector<string> splitString(string str, char splitter, int ws){
         }
         current += str[i];
     }
-    if(current.size() != 0)
+    if(current.size() >= ws)
         result.push_back(current);
     return result;
 }
